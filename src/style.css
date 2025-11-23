@@ -1,0 +1,85 @@
+:root {
+  --white: #fff;
+  --black-market: #231e41;
+  --light-black-market: #6f6f87;
+  --saffaron: #f5c332;
+  --dark-gray: #f2f3f5;
+  --light-gray: #f9fafc;
+}
+
+* {
+  color: var(--black-market);
+  letter-spacing: 0.03rem;
+}
+
+/* ============================= NAVBAR STYLING ==================================*/
+.navbar {
+  background-color: var(--dark-gray);
+  height: 5rem;
+  border: solid black;
+  border-width: .01rem 0 .01rem 0;
+}
+
+
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--black-market);
+}
+
+.fa-bowl-rice,
+.active,
+.nav-link:hover {
+  color: var(--saffaron) !important;
+}
+
+.nav-link {
+  color: var(--black-market);
+  font-size: .9rem;
+}
+
+.nav-item {
+  padding-inline: 1.5rem;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+}
+
+.nav-icons>a:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: var(--dark-gray);
+  border-radius: 50%;
+  height: 40px;
+  text-decoration: none;
+  width: 40px;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width:992px) {
+
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+    width: 100%;
+    background-color: var(--dark-gray);
+    text-align: center;
+    font-size: 1.1rem;
+
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+}
