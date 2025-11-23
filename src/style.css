@@ -82,4 +82,8 @@
   .nav-item {
     margin: 0.5rem 0;
   }
+
+  .collapsing {
+    transition: height .4s ease !important;
+  }
 }
