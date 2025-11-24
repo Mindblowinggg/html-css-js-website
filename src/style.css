@@ -34,7 +34,7 @@ a {
 
 /* ============================= NAVBAR STYLING ==================================*/
 .navbar {
-  background-color: var(--dark-gray);
+  background-color: rgba(242, 243, 245, 0.8);
   height: 5rem;
   border: solid black;
   border-width: .01rem 0 .01rem 0;
@@ -43,7 +43,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 99;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(20px);
 }
 
 .navcontainer {
@@ -350,4 +350,34 @@ a {
   width: 70px;
   height: fit-content;
   color: var(--saffaron);
+}
+
+@media (max-width: 992px) {
+  .contentcol {
+    position: relative;
+    height: auto;
+    top: 0;
+    padding-bottom: 2rem;
+  }
+
+  .imagecol {
+    height: 60vh;
+  }
+
+}
+
+
+@media (max-width:576px) {
+  .contentcol {
+    position: relative;
+    height: auto;
+    top: 0;
+    padding-bottom: 2rem;
+  }
+
+
+
+  .section2 {
+    padding-top: 80px;
+  }
 }
