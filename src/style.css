@@ -203,6 +203,7 @@ a {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  border-radius: 0 0 100% 100%;
 }
 
 .menu-btn {
@@ -240,11 +241,15 @@ a {
 
 
 /* second main section */
+.section2 {
+  padding-top: 30px;
+  background: var(--dark-gray);
+  position: relative;
+}
 
 .imagecol {
   height: 100vh;
   width: 100%;
-  background: var(--dark-gray);
   position: relative;
 }
 
@@ -290,7 +295,21 @@ a {
 }
 
 .contentcol {
-  height: 100vh;
+  height: 90%;
   width: 100%;
   background: #9c8fe2;
+  position: absolute;
+  top: 10%;
+  right: 0;
+
+}
+
+
+.contentcol ul {
+  padding: 0;
+  padding-top: 30px;
+}
+
+.contentcol ul li {
+  list-style: none;
 }
