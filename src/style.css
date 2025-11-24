@@ -43,6 +43,7 @@ a {
   left: 0;
   width: 100%;
   z-index: 99;
+  backdrop-filter: blur(4px);
 }
 
 .navcontainer {
@@ -121,7 +122,7 @@ a {
     top: 5rem;
     width: 100%;
     background-color: rgba(242, 243, 245, 0.85);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     text-align: center;
     font-size: 1rem !important;
 
@@ -297,19 +298,56 @@ a {
 .contentcol {
   height: 90%;
   width: 100%;
-  background: #9c8fe2;
+  background: var(--light-gray);
   position: absolute;
+  padding-inline: 3rem !important;
   top: 10%;
   right: 0;
-
 }
 
 
 .contentcol ul {
   padding: 0;
   padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
 }
 
 .contentcol ul li {
   list-style: none;
+  display: flex;
+  padding-top: 20px;
+}
+
+.contentcol>h1 {
+  font-weight: 700;
+  padding-top: 5rem;
+
+}
+
+.contentcol ul li div p {
+  margin-bottom: 0px;
+
+}
+
+.contentcol ul li div p:nth-child(1) {
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+}
+
+.contentcol ul li div {
+  padding-inline: 20px;
+
+}
+
+.contentcol ul li h1 {
+  font-family: "Philosopher", sans-serif;
+  margin-bottom: 0;
+  font-weight: 800;
+  width: 70px;
+  height: fit-content;
+  color: var(--saffaron);
 }
