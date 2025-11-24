@@ -12,6 +12,10 @@
   letter-spacing: 0.03rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ============================= NAVBAR STYLING ==================================*/
 .navbar {
   background-color: var(--dark-gray);
@@ -85,5 +89,70 @@
 
   .collapsing {
     transition: height .4s ease !important;
+  }
+}
+
+
+
+/* MAIN HERO SECTION */
+.heroSection {
+  height: calc(100vh - 5rem);
+}
+
+.herotext span {
+  background-color: var(--dark-gray);
+}
+
+
+.herotext h1 {
+  font-size: 4rem;
+  letter-spacing: .1px;
+  padding-top: .5rem;
+  font-weight: 700;
+}
+
+.herotext p {
+  font-weight: 500;
+  padding-top: 1rem;
+}
+
+.herotext button {
+  margin-top: 1rem;
+}
+
+.heroimg {
+  background-image: url("/public/heroimg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.menu-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--saffaron);
+  padding: .3rem .5rem;
+  transition: all 0.3s;
+  border: .5px solid;
+}
+
+.menu-btn:hover {
+  background-color: #f9ce4d;
+}
+
+@media (max-width:992px) {
+  .herotext h1 {
+    font-size: 2.5rem;
+    padding-top: .5rem;
+    font-weight: 700;
+  }
+
+  .heroimg {
+    background-size: cover;
+    height: calc(100vh - 40vh);
+
   }
 }
