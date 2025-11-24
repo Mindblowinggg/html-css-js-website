@@ -207,6 +207,7 @@ a {
 @media (max-width:992px) {
   .heroSection {
     min-height: 100vh;
+    margin-top: 5rem !important;
   }
 
   .herotext h1 {
