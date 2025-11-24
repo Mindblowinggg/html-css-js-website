@@ -70,6 +70,16 @@ a {
 /* MEDIA QUERY */
 
 @media (max-width:992px) {
+  .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  /* Jab navbar-collapse par 'show' class ho, tab body scroll na kare */
+  body:has(.navbar-collapse.show) {
+    overflow: hidden;
+  }
 
   .navbar-collapse {
     position: absolute;
@@ -77,10 +87,20 @@ a {
     right: 0;
     top: 5rem;
     width: 100%;
-    background-color: var(--dark-gray);
+    background-color: rgba(242, 243, 245, 0.85);
+    backdrop-filter: blur(8px);
     text-align: center;
     font-size: 1.1rem;
 
+  }
+
+  .nav-item {
+    font-weight: 600;
+    font-size: larger;
+  }
+
+  .navbar-nav {
+    min-height: calc(100vh);
   }
 
   .nav-item {
@@ -88,15 +108,30 @@ a {
   }
 
   .collapsing {
-    transition: height .4s ease !important;
+    transition: height .5s ease-in-out !important;
+
   }
 }
 
 
 
-/* MAIN HERO SECTION */
+/*===================== MAIN HERO SECTION ==========================*/
 .heroSection {
   height: calc(100vh - 5rem);
+  position: relative;
+  z-index: 1;
+}
+
+.heroSection::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--dark-gray);
+  z-index: -1;
+  clip-path: polygon(100% 0, 1% 100%, 100% 100%);
 }
 
 .herotext span {
@@ -121,7 +156,7 @@ a {
 }
 
 .heroimg {
-  background-image: url("/public/heroimg.png");
+  background-image: url("/heroimg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -144,6 +179,10 @@ a {
 }
 
 @media (max-width:992px) {
+  .heroSection {
+    min-height: 100vh;
+  }
+
   .herotext h1 {
     font-size: 2.5rem;
     padding-top: .5rem;
