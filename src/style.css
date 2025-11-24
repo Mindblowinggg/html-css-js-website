@@ -23,11 +23,16 @@ a {
   height: 5rem;
   border: solid black;
   border-width: .01rem 0 .01rem 0;
-
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
 
 .navcontainer {
   padding: 0 !important;
+
 }
 
 
@@ -57,7 +62,7 @@ a {
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
-  gap: 1rem;
+
 }
 
 .nav-icons>a {
@@ -77,9 +82,10 @@ a {
 
 @media (max-width:992px) {
   .navbar {
-    position: fixed;
+    position: fixed !important;
     left: 0;
     right: 0;
+    width: 100%;
   }
 
   @media (max-width:576px) {
@@ -135,6 +141,7 @@ a {
   height: calc(100vh - 5rem);
   position: relative;
   z-index: 1;
+  margin-top: 5rem !important;
 }
 
 .heroSection::before {
